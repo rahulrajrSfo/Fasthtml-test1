@@ -12,9 +12,9 @@ load_dotenv()
 
 supabase = create_client(os.getenv("SUPABASE_URL"),os.getenv("SUPABASE_KEY"))
 
-app,rt = fast_app()
-# (    hdrs=(Link(rel="icon",type="assets/x-icon",href="/assets/favicon.png"),),
-# )
+app,rt = fast_app(    
+    hdrs=(Link(rel="icon",type="assets/x-icon",href="/assets/favicon.png"),),
+)
 
 def get_time():
     cet_tz = pytz.timezone("CET")
